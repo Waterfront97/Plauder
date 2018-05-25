@@ -1,7 +1,10 @@
-language:node_js
+language: node_js
+node_js:
+  - "10.2"
 
 before_script:
-- cd Client
+  - cd Client
+  - npm install
 
 script:
-- ng build --prod
+  - ng build --prod
