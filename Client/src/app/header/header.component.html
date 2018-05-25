@@ -1,0 +1,8 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <span>Als</span>
+  <mat-form-field>
+    <input type="text" matInput (change)="changeName($event.target.value)" [(ngModel)]="username">
+  </mat-form-field>
+  <span>plaudern!</span>
+</mat-toolbar>
+

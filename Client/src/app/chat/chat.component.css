@@ -1,0 +1,10 @@
+.msg-header{
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+#container{
+  overflow: auto;
+  width:100%;
+  height:100%;
+}

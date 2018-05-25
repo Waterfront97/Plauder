@@ -1,0 +1,22 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+  <mat-form-field fxFlex>
+    <input
+      matInput
+
+      fxFlex
+      #msgText
+      (keyup)="keyup($event)"
+      [(ngModel)]="areaText"
+      placeholder="Nachricht">
+  </mat-form-field>
+
+  <div>
+    <button mat-icon-button disabled="true">
+      <mat-icon aria-label="Send Photos" matTooltip="Kommt bald!">photo</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Nachricht absenden!" (click)="sendMsg(msgText.value)">
+      <mat-icon aria-label="Send">send</mat-icon>
+    </button>
+  </div>
+</div>
+
