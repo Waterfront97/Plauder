@@ -11,6 +11,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {SocketService} from './services/socket.service';
+import {LinkifyPipe} from './pipes/linkify.pipe';
+import {ImgifyPipe} from './pipes/imgify.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {SocketService} from './services/socket.service';
     HeaderComponent,
     FooterComponent,
     UserlistComponent,
-    ChatComponent
+    ChatComponent,
+    LinkifyPipe,
+    ImgifyPipe
   ],
   imports: [
     BrowserModule,

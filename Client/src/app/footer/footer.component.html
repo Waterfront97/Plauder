@@ -11,8 +11,9 @@
   </mat-form-field>
 
   <div>
-    <button mat-icon-button disabled="true">
-      <mat-icon aria-label="Send Photos" matTooltip="Kommt bald!">photo</mat-icon>
+    <input type="file" hidden (change)="fileChange($event)" id="fileinput">
+    <button mat-icon-button (click)="openDialog()">
+      <mat-icon aria-label="Send Photos" matTooltip="Bild senden!">photo</mat-icon>
     </button>
     <button mat-icon-button matTooltip="Nachricht absenden!" (click)="sendMsg(msgText.value)">
       <mat-icon aria-label="Send">send</mat-icon>

@@ -10,6 +10,7 @@ import {Message} from '../models/message';
 export class ChatComponent implements OnInit {
   public messages: Message[] = [];
   @ViewChild('container') private container: ElementRef;
+  public test = '<script>alert(1);</script>';
 
   constructor(private socketService: SocketService) {
     socketService.message.subscribe((msg: Message) => {

@@ -20,6 +20,21 @@ export class FooterComponent implements OnInit {
     this.socketService.sendMessage(msg);
   }
 
+  public fileChange(event): void {
+    const reader = new FileReader();
+    if (event.target.files && event.target.files.length > 0) {
+      const file = event.target.files[0];
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.sendMsg(reader.result);
+      };
+    }
+  }
+
+  public openDialog(): void {
+    document.getElementById('fileinput').click();
+  }
+
   public keyup(event): void {
     if (event.key === 'Enter') {
       this.sendMsg(this.areaText);
