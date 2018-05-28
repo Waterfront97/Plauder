@@ -13,7 +13,7 @@ export class LinkifyPipe implements PipeTransform {
     }
 
     for (let i = 0; i < d.length; i++) {
-      value = value.replace(d[i], '<a href="' + d[i] + '">' + d[i] + '</a>');
+      value = value.replace(d[i], '<a href="' + d[i] + '" target="_blank">' + d[i] + '</a>');
     }
     return value;
   }
