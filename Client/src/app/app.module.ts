@@ -8,11 +8,20 @@ import { FooterComponent } from './footer/footer.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { ChatComponent } from './chat/chat.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatButtonModule, MatIconModule, MatInputModule, MatListModule, MatToolbarModule, MatTooltipModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatSlideToggleModule,
+  MatToolbarModule,
+  MatTooltipModule
+} from '@angular/material';
 import {FormsModule} from '@angular/forms';
 import {SocketService} from './services/socket.service';
 import {LinkifyPipe} from './pipes/linkify.pipe';
 import {ImgifyPipe} from './pipes/imgify.pipe';
+import {NotificationService} from './services/notification.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +43,10 @@ import {ImgifyPipe} from './pipes/imgify.pipe';
     MatIconModule,
     MatListModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+    MatSlideToggleModule
   ],
-  providers: [SocketService],
+  providers: [SocketService, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
