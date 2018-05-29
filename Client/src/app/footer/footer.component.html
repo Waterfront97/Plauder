@@ -11,7 +11,7 @@
   </mat-form-field>
 
   <div>
-    <input type="file" hidden (change)="fileChange($event)" id="fileinput">
+    <input type="file" hidden (change)="fileChange($event)" id="fileinput" accept="image/*">
     <button mat-icon-button (click)="openDialog()">
       <mat-icon aria-label="Send Photos" matTooltip="Bild senden!">photo</mat-icon>
     </button>

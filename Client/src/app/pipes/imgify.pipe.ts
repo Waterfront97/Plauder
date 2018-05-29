@@ -12,7 +12,7 @@ export class ImgifyPipe implements PipeTransform {
       return value;
     }
 
-    value = '<img src="' + d[0] + '">';
+    value = '<img class="chat-img" src="' + d[0] + '">';
     return value;
   }
 

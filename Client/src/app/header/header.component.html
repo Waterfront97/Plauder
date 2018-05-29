@@ -1,12 +1,13 @@
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
   <div>
     <span>Als</span>
-    <mat-form-field>
+    <mat-form-field style="margin-left:6px; margin-right:6px;">
       <input type="text" matInput (change)="changeName($event.target.value)" [(ngModel)]="username">
     </mat-form-field>
     <span>plaudern!</span>
   </div>
-  <mat-slide-toggle labelPosition="before" (change)="toggleNotifys($event)" [checked]="notifyChecked">
+  <mat-slide-toggle labelPosition="before" (change)="toggleNotifys($event)" [checked]="notifyChecked"
+                    matTooltip="Desktop Benachrichtigungen">
     <mat-icon>notifications_active</mat-icon>
   </mat-slide-toggle>
 </mat-toolbar>
