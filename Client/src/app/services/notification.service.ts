@@ -26,6 +26,13 @@ export class NotificationService {
     if (!this.browserSupport || !this.enableNotifications || Notification.permission !== 'granted' || windowActive) {
       return;
     }
+    const imgRegex = new RegExp('data:image\\/.*;base64,.*');
+    const d = msg.match(imgRegex);
+
+    if (d) {
+      msg = 'Bild';
+    }
+
     const note = new Notification(title, {body: msg, icon: 'favicon.ico'});
     setTimeout(note.close.bind(note), 1750);
   }
