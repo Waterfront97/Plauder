@@ -1,0 +1,8 @@
+<div #container id="container">
+  <mat-list>
+    <mat-list-item *ngFor="let msg of messages">
+      <span class="msg-header">({{msg.timestamp}}) {{msg.username}}:</span>
+      <span [innerHTML]="msg.content | linkify | imgify"></span>
+    </mat-list-item>
+  </mat-list>
+</div>

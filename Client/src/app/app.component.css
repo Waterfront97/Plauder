@@ -1,0 +1,6 @@
+.ff-fix {
+  /*
+  Subtract header and footer height to avoid firefox bug
+   */
+  height: calc(100% - 129px);
+}

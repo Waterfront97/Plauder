@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutAlign="start center">
+  <mat-form-field fxFlex>
+    <input
+      matInput
+
+      fxFlex
+      #msgText
+      (keyup)="keyup($event)"
+      [(ngModel)]="areaText"
+      placeholder="Nachricht">
+  </mat-form-field>
+
+  <div>
+    <input type="file" hidden (change)="fileChange($event)" id="fileinput" accept="image/*">
+    <button mat-icon-button (click)="openDialog()" color="primary">
+      <mat-icon aria-label="Send Photos" matTooltip="Bild senden!">photo</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Nachricht absenden!" (click)="sendMsg(msgText.value)" color="primary">
+      <mat-icon aria-label="Send">send</mat-icon>
+    </button>
+  </div>
+</div>
+
