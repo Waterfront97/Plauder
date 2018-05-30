@@ -4,9 +4,7 @@ node_js:
 
 before_script:
   - cd Client
-  
-install:
-  - npm ci
+  - npm install
 
 script:
   - ng build --prod
