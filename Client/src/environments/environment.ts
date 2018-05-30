@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  serverAddress: 'http://localhost:2135'
+  serverAddress: 'http://localhost:2135',
+  version: 'dev'
 };
 
 /*

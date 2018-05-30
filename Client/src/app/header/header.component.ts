@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {SocketService} from '../services/socket.service';
 import {MatSlideToggleChange} from '@angular/material';
 import {NotificationService} from '../services/notification.service';
+import {environment} from '../../environments/environment';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +12,7 @@ import {NotificationService} from '../services/notification.service';
 export class HeaderComponent implements OnInit {
   public username = '';
   public notifyChecked: boolean;
+  public version = environment.version;
 
   constructor(private socketService: SocketService, private notify: NotificationService) {
     const savedName = localStorage.getItem('username');
