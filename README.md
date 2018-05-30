@@ -3,8 +3,6 @@
 [![Build Status](https://travis-ci.org/Waterfront97/Plauder.svg?branch=develop)](https://travis-ci.org/Waterfront97/Plauder)
 
 Plauder is a german webchat based on Angular 6, NodeJS and Socket.io.
- 
----
 
 ## Features
 
@@ -13,8 +11,6 @@ Plauder is a german webchat based on Angular 6, NodeJS and Socket.io.
 * Silent Favicon Notifications
 * Send Images via Copy & Paste
 * URL Parser
-
----
 
 ## Installation
 
@@ -26,14 +22,11 @@ The Server folder contains the NodeJS webserver project with socket.io.
 3. Copy all files from `Client/dist/Client/*` to `Server/www/`
 4. Start the webserver `node Server/server.js`
 
----
-
 ## Plauder Update Script (Linux Bash)
 
 You can use the `updatePlauder.sh` script to automate the app deployment.
-Make sure you cloned the repository and have a working systemd unit ([example](https://gist.github.com/Waterfront97/178fdc5564d0a4dae96190d9111c4e0c)).
 
----
+Make sure you cloned the repository and have a working systemd unit ([example](https://gist.github.com/Waterfront97/178fdc5564d0a4dae96190d9111c4e0c)).
 
 ## License
 
