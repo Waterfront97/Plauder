@@ -9,7 +9,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { ChatComponent } from './chat/chat.component';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {
-  MatButtonModule,
+  MatButtonModule, MatCardModule, MatDialogModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
@@ -22,6 +22,7 @@ import {SocketService} from './services/socket.service';
 import {LinkifyPipe} from './pipes/linkify.pipe';
 import {ImgifyPipe} from './pipes/imgify.pipe';
 import {NotificationService} from './services/notification.service';
+import {SendImageDialogComponent} from './send-image-dialog/send-image-dialog.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {NotificationService} from './services/notification.service';
     UserlistComponent,
     ChatComponent,
     LinkifyPipe,
-    ImgifyPipe
+    ImgifyPipe,
+    SendImageDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,9 +46,11 @@ import {NotificationService} from './services/notification.service';
     MatListModule,
     MatTooltipModule,
     FormsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatDialogModule
   ],
   providers: [SocketService, NotificationService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SendImageDialogComponent]
 })
 export class AppModule { }

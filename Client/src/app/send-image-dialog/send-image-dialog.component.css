@@ -1,0 +1,18 @@
+img {
+  width: auto;
+  max-height: 600px;
+}
+
+#send {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  background: green;
+}
+
+#close {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  background: red;
+}
