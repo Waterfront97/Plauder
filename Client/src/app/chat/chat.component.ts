@@ -3,6 +3,8 @@ import {SocketService} from '../services/socket.service';
 import {Message} from '../models/message';
 import {NotificationService} from '../services/notification.service';
 
+declare var windowActive: any;
+
 @Component({
   selector: 'app-chat',
   templateUrl: './chat.component.html',
@@ -11,7 +13,6 @@ import {NotificationService} from '../services/notification.service';
 export class ChatComponent implements OnInit {
   public messages: Message[] = [];
   @ViewChild('container') private container: ElementRef;
-  public test = '<script>alert(1);</script>';
 
   constructor(private socketService: SocketService, private notify: NotificationService) {
     socketService.message.subscribe((msg: Message) => {
@@ -19,6 +20,11 @@ export class ChatComponent implements OnInit {
       const myUsername = localStorage.getItem('username');
       if (myUsername !== msg.username) {
         notify.sendNotification(msg.username, msg.content);
+
+        if (!windowActive) {
+          document.querySelector('link[rel="icon"]').setAttribute('href', 'assets/msg_favicon.ico');
+        }
+
       }
 
       setTimeout(() => this.container.nativeElement.scrollTo(0, this.container.nativeElement.scrollHeight + 500), 10);

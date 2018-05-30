@@ -1,8 +1,16 @@
+var windowActive = true;
+var favicon = document.querySelector('link[rel="icon"]');
+
 (function () {
+
   window.onfocus = function () {
-    console.log(1);
+    windowActive = true;
+    favicon.setAttribute('href', 'favicon.ico');
   };
+
   window.onblur = function () {
-    console.log(0);
+    windowActive = false;
   };
+
 })();
+

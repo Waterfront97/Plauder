@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 
 declare var Notification: any;
+declare var windowActive: any;
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +23,7 @@ export class NotificationService {
   }
 
   public sendNotification(title: string, msg: string): void {
-    if (!this.browserSupport || !this.enableNotifications || Notification.permission !== 'granted') {
+    if (!this.browserSupport || !this.enableNotifications || Notification.permission !== 'granted' || windowActive) {
       return;
     }
     const note = new Notification(title, {body: msg, icon: 'favicon.ico'});

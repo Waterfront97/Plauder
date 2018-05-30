@@ -10,7 +10,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    const fav = document.querySelector('link[rel="icon"]');
+    console.log(fav);
   }
 
 }
